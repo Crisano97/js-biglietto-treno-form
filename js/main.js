@@ -6,7 +6,8 @@
    // se l'utente è ha un'età maggiore o uguale di 65 anni sarà applicato uno sconto del 35%;
 // L'output del form andrà visualizzato in console con massimo due decimali
 
-
+const userAgeElement = document.getElementById('user-age');
+const userPathElement = document.getElementById('user-path');
 
 const generatorButton = document.querySelector('#generator-button');
 
@@ -14,32 +15,39 @@ generatorButton.addEventListener('click' , function(){
     console.log(document.getElementById('user-age').value);
     console.log(document.getElementById('user-path').value);
 
-    const userAge = document.getElementById('user-age').value;
-const userPath = document.getElementById('user-path').value;
+    const userAge = userAgeElement.value;
+    const userPath = userPathElement.value;
 
-console.log(userAge, userPath);
+    console.log(userAge, userPath);
 
-if (isNaN(userAge) == true ) {
-    console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
+    if (isNaN(userAge) == true ) {
+        console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
 
-} else if (isNaN(userPath) == true ) {
-    console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
-    
-} else {
-    let userCost = 0.26 * userPath;
-    console.log(userCost);
-
-    let userTotal;
-
-    if (userAge >= 65) {
-        userTotal = (userCost * 65) / 100;
-    } else if (userAge <= 18) {
-        userTotal = (userCost * 85) / 100;
+    } else if (isNaN(userPath) == true ) {
+        console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
+        
     } else {
-        userTotal = userCost;
-    }
+        let userCost = 0.26 * userPath;
+        console.log(userCost);
 
-    console.log(userTotal.toFixed(2) + "€");
-}
+        let userTotal;
+        let userOffer;
+        
+        if (userAge >= 65) {
+            userTotal = (userCost * 65) / 100;
+            userOffer = "35%";
+
+        } else if (userAge <= 18) {
+            userTotal = (userCost * 85) / 100;
+            userOffer = "15%";
+
+        } else {
+            userTotal = userCost;
+            userOffer = "Biglietto standard";
+        }
+        
+        console.log(userOffer)
+        console.log(userTotal.toFixed(2) + "€");
+    }
 
 });
