@@ -6,30 +6,38 @@
    // se l'utente è ha un'età maggiore o uguale di 65 anni sarà applicato uno sconto del 35%;
 // L'output del form andrà visualizzato in console con massimo due decimali
 
-const userAge = parseInt(prompt('inserisci la tua età'));
-const userPath = parseInt(prompt('inserisci il numero di chilometri che vuoi percorrere'));
+// const userAge = parseInt(prompt('inserisci la tua età'));
+// const userPath = parseInt(prompt('inserisci il numero di chilometri che vuoi percorrere'));
 
-console.log(userAge, userPath);
+// console.log(userAge, userPath);
 
-if (isNaN(userAge) == true ) {
-    console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
+// if (isNaN(userAge) == true ) {
+//     console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
 
-} else if (isNaN(userPath) == true ) {
-    console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
+// } else if (isNaN(userPath) == true ) {
+//     console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
     
-} else {
-    let userCost = 0.26 * userPath;
-    console.log(userCost);
+// } else {
+//     let userCost = 0.26 * userPath;
+//     console.log(userCost);
 
-    let userTotal;
+//     let userTotal;
 
-    if (userAge >= 65) {
-        userTotal = (userCost * 65) / 100;
-    } else if (userAge <= 18) {
-        userTotal = (userCost * 85) / 100;
-    } else {
-        userTotal = userCost;
-    }
+//     if (userAge >= 65) {
+//         userTotal = (userCost * 65) / 100;
+//     } else if (userAge <= 18) {
+//         userTotal = (userCost * 85) / 100;
+//     } else {
+//         userTotal = userCost;
+//     }
 
-    console.log(userTotal.toFixed(2) + "€");
-}
+//     console.log(userTotal.toFixed(2) + "€");
+// }
+
+const generatorButton = document.querySelector('#generator-button');
+
+generatorButton.addEventListener('click' , function(){
+    console.log(document.getElementById('user-age').value);
+    console.log(document.getElementById('user-path').value);
+
+});
