@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,35 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>BIGLIETTO TRENO</title>
 </head>
+
 <body>
 
     <div class="main-container">
-       <div class="container">
-        <div class="i-container d-flex">
-            <label for="user-age"><span class="text">Inserisci la tua età:</span></label>
-            <input class="m-impt" id="user-age" type="text">
-        </div>
-        <div class="i-container d-flex m-y">
-            <label for="user-path"><span class="text">Inserisci il numero di chilometri che vuoi percorrere:</span></label>
-            <input class="m-impt" id="user-path" type="text">
-        </div>
-        <button class="m-y m-btn" type="submit" id="generator-button">Genera</button>
-        <span class="price m-y text" id="user-price">Prezzo del viaggio:</span>
-        <span class="price m-y text" id="user-offer">Offerta in base alla tua età:</span>
-        <span class="price m-y text" id="user-ultimate-price">Prezzo finale:</span>
+        <h1 class="c-w m-y ">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-       </div>
+        <div class="container">
+            <div class="c-little  d-flex">
+                <div class="i-container">
+                    <label for="user-age"><span class="text d-block">Inserisci la tua età:</span></label>
+                    <input class="m-impt" id="user-age" type="text">
+                </div>
+                <div class="i-container m-y">
+                    <label for="user-path"><span class="text d-block">Km che vuoi percorrere:</span></label>
+                    <input class="m-impt" id="user-path" type="text">
+                </div>
+            </div>
+            <button class="m-y m-btn d-block" type="submit" id="generator-button">Genera</button>
+            <div class="c-little">
+                <span class="d-block m-y text " id="user-price">Prezzo del viaggio:</span>
+                <span class="d-block m-y text " id="user-offer">Offerta in base alla tua età:</span>
+                <span class="d-block m-y text " id="user-ultimate-price">Prezzo finale:</span>
+            </div>
+        </div>
+        
     </div>
 
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>

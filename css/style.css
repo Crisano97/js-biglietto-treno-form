@@ -5,57 +5,67 @@
 }
 
 .main-container {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-color: blueviolet;
+    background-color: rgb(115, 10, 10);
+    padding: 20px;
 }
 
 .container {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,  -50%);
-    width: 50%;
+    transform: translate(-50%,  -50%); */
+    /* width: 80%; */
     padding: 50px;
-    background-color: rgb(150, 92, 205);
+    background-color: white;
     border-radius: 20px;
 }
 
-.container span {
+.c-w {
     color: white;
 }
 
 .m-impt {
-    background-color: blueviolet;
-    color: white;
+    background-color: white;
     font-size: 40px;
+    border: 2px solid rgb(115, 10, 10);
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .i-container {
     width: 50%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .d-flex {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 .m-y {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .text {
     font-size: 2rem;
 }
 
-.price {
+.d-block {
     display: block;
 }
 
 .m-btn {
     font-size: 30px;
     padding: 10px;
+    background-color: lightgray;
+    border:  2px solid rgb(115, 10, 10);
+    border-radius: 20px;
+    margin: 020px auto;
 }
