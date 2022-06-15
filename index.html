@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="./css/style.css">
     <title>BIGLIETTO TRENO</title>
 </head>
 <body>
 
-    <div>
-        <label for="user-age">Inserisci la tua età:</label>
-        <input id="user-age" type="text">
-        <label for="user-path">Inserisci il numero di chilometri che vuoi percorrere:</label>
-        <input id="user-path" type="text">
-        <button type="submit" id="generator-button">Genera</button>
+    <div class="main-container">
+       <div class="container">
+        <div class="i-container d-flex">
+            <label for="user-age"><span class="text">Inserisci la tua età:</span></label>
+            <input class="m-impt" id="user-age" type="text">
+        </div>
+        <div class="i-container d-flex m-y">
+            <label for="user-path"><span class="text">Inserisci il numero di chilometri che vuoi percorrere:</span></label>
+            <input class="m-impt" id="user-path" type="text">
+        </div>
+        <button class="m-y m-btn" type="submit" id="generator-button">Genera</button>
+        <span class="price m-y text" id="user-price">Prezzo del viaggio:</span>
+        <span class="price m-y text" id="user-offer">Offerta in base alla tua età:</span>
+        <span class="price m-y text" id="user-ultimate-price">Prezzo finale:</span>
+
+       </div>
     </div>
 
 

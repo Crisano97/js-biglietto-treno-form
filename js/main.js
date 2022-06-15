@@ -28,7 +28,8 @@ generatorButton.addEventListener('click' , function(){
         
     } else {
         let userCost = 0.26 * userPath;
-        console.log(userCost);
+        console.log(userCost.toFixed(2) + "€");
+
 
         let userTotal;
         let userOffer;
@@ -45,9 +46,15 @@ generatorButton.addEventListener('click' , function(){
             userTotal = userCost;
             userOffer = "Biglietto standard";
         }
-        
+
         console.log(userOffer)
         console.log(userTotal.toFixed(2) + "€");
+
+        document.getElementById('user-price').innerHTML += " " + userCost + "€";
+        document.getElementById('user-offer').innerHTML += " " + userOffer;
+        document.getElementById('user-ultimate-price').innerHTML += " " + userTotal + "€";
+
     }
+
 
 });
