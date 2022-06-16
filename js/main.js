@@ -15,18 +15,18 @@ generatorButton.addEventListener('click' , function(){
     console.log(document.getElementById('user-age').value);
     console.log(document.getElementById('user-path').value);
 
-    const userAge = userAgeElement.value;
-    const userPath = userPathElement.value;
+    const userAge = parseInt(userAgeElement.value);
+    const userPath = parseInt(userPathElement.value);
 
     console.log(userAge, userPath);
 
-    if (isNaN(userAge) == true ) {
-        console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
+     if (isNaN(userAge) == true ) {
+         console.log('il formato della tua età non è stato accettato, ricarica la pagina e riprova');
 
-    } else if (isNaN(userPath) == true ) {
-        console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
+     } else if (isNaN(userPath) == true ) {
+         console.log('il formato del numero di chilometri non è stato accettato, ricarica la pagina e riprova');
         
-    } else {
+     } else {
         let userCost = 0.26 * userPath;
         console.log(userCost.toFixed(2) + "€");
 
@@ -50,11 +50,16 @@ generatorButton.addEventListener('click' , function(){
         console.log(userOffer)
         console.log(userTotal.toFixed(2) + "€");
 
+        document.getElementById('user-price').innerHTML = "Prezzo del viaggio:";
         document.getElementById('user-price').innerHTML += " " + userCost + "€";
+
+        document.getElementById('user-offer').innerHTML = "Offerta in base alla tua età:";
         document.getElementById('user-offer').innerHTML += " " + userOffer;
+
+        document.getElementById('user-ultimate-price').innerHTML = "Prezzo finale:";
         document.getElementById('user-ultimate-price').innerHTML += " " + userTotal + "€";
 
-    }
+     }
 
 
 });
